@@ -80,13 +80,13 @@ burn-on-read-service/
 │   ├── app.ts              # Express application setup
 │   ├── routes/
 │   │   └── index.ts        # Route handlers
-│   ├── utils/
-│   │   ├── sanitize.ts     # Input sanitization
-│   │   └── fileManager.ts  # File operations
-│   └── views/
-│       ├── index.njk       # Home page
-│       ├── success.njk     # Link created page
-│       └── message.njk     # Message display page
+│   └── utils/
+│       ├── sanitize.ts     # Input sanitization
+│       └── fileManager.ts  # File operations
+├── views/
+│   ├── index.njk           # Home page
+│   ├── success.njk         # Link created page
+│   └── message.njk         # Message display page
 ├── public/
 │   └── styles/
 │       └── main.css        # Empty (100% Pico.css)

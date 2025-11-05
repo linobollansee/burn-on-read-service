@@ -64,13 +64,13 @@ burn-on-read-service/
 │   ├── app.ts              # Main application file
 │   ├── routes/
 │   │   └── index.ts        # Route handlers
-│   ├── utils/
-│   │   ├── sanitize.ts     # Input sanitization utilities
-│   │   └── fileManager.ts  # File operations
-│   └── views/
-│       ├── index.njk       # Home page with form
-│       ├── success.njk     # Success page with shareable link
-│       └── message.njk     # Message display page
+│   └── utils/
+│       ├── sanitize.ts     # Input sanitization utilities
+│       └── fileManager.ts  # File operations
+├── views/
+│   ├── index.njk           # Home page with form
+│   ├── success.njk         # Success page with shareable link
+│   └── message.njk         # Message display page
 ├── public/
 │   └── styles/
 │       └── main.css        # Empty file (using 100% Pico.css)
@@ -138,7 +138,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "../public")));
 
 // Configure Nunjucks
-nunjucks.configure(path.join(__dirname, "views"), {
+nunjucks.configure(path.join(__dirname, "../views"), {
   autoescape: true,
   express: app,
 });
@@ -157,7 +157,7 @@ app.listen(PORT, () => {
 
 > **Design Philosophy**: This project uses **100% Pico.css** with no custom CSS. The templates use minimal semantic wrappers to avoid spacing issues with Pico.css's opinionated styling. We rely on Pico.css's automatic styling of HTML elements for a clean, professional look.
 
-### Create `src/views/index.njk` (Home Page)
+### Create `views/index.njk` (Home Page)
 
 ```html
 <!DOCTYPE html>
@@ -196,7 +196,7 @@ app.listen(PORT, () => {
 </html>
 ```
 
-### Create `src/views/success.njk` (Success Page)
+### Create `views/success.njk` (Success Page)
 
 ```html
 <!DOCTYPE html>
@@ -249,7 +249,7 @@ app.listen(PORT, () => {
 </html>
 ```
 
-### Create `src/views/message.njk` (Message Display)
+### Create `views/message.njk` (Message Display)
 
 ```html
 <!DOCTYPE html>
@@ -499,7 +499,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "../public")));
 
 // Configure Nunjucks
-nunjucks.configure(path.join(__dirname, "views"), {
+nunjucks.configure(path.join(__dirname, "../views"), {
   autoescape: true,
   express: app,
 });
