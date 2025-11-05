@@ -19,7 +19,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "../public")));
 
 // Configure Nunjucks
-nunjucks.configure(path.join(__dirname, "views"), {
+nunjucks.configure(path.join(__dirname, "../views"), {
   autoescape: true,
   express: app,
 });
