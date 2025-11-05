@@ -16,7 +16,7 @@ A burn on read service is a web service to automatically delete messages or cont
 - Setup an Express.js application with TypeScript.
 - Use Nunjucks for templates.
 - Create your own CSS or a CSS framework of your choice.
-  - Maybe it is time to give [PICO.CSS](https://picocss.com/) {target=”_top”} a shot ;) It's often a good choice to get an okayish base layout without tons of CSS classes.
+  - Maybe it is time to give [PICO.CSS](https://picocss.com/) a shot ;) It's often a good choice to get an okayish base layout without tons of CSS classes.
 - Provide a text field so that the user can fill it out.
   - Store the text content into a file.
   - Ensure that the user input gets `sanitized` before storing it to the file.
