@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Burn on Read</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>🔥 Burn on Read</h1>
+      <p>Send a secret message that self-destructs after being read</p>
+
+      <form action="/create" method="POST">
+        <label for="message">
+          Your Secret Message
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Enter your message here..."
+            required
+            rows="6"
+          ></textarea>
+        </label>
+
+        <button type="submit">Create Secure Link</button>
+      </form>
+    </main>
+  </body>
+</html>

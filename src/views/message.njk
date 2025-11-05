@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Secret Message - Burn on Read</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>🔓 Secret Message</h1>
+
+      {% if message %}
+      <blockquote>
+        {{ message }}
+      </blockquote>
+
+      <p>
+        <small
+          >⚠️ This message has been destroyed and cannot be viewed again.</small
+        >
+      </p>
+      {% else %}
+      <p>❌ This message has already been read or does not exist.</p>
+      {% endif %}
+
+      <a href="/" role="button">Create Your Own Message</a>
+    </main>
+  </body>
+</html>
